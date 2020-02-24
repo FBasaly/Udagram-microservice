@@ -1,5 +1,5 @@
   
-language:
+language: generic
 
 services: docker
 
@@ -17,7 +17,7 @@ before_install:
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
 install:
-  - docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel 
+  - docker-compose -f udacity-c3-deployment/docker/docker-compose-build.yaml build --parallel 
 
 deploy:
   skip_cleanup: true
